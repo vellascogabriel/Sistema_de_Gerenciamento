@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+
+{% block content%}
+    <div class = 'card'>
+        <section 
+        class="avatar" 
+        style = " width:350px; background: url({{ vendedor.avatar_url}}) no-repeat center center / cover "></section>
+        <section class="details">
+            <h3>Vendedor</h3>
+
+            <div class = "item">
+                <div> Nome </div>
+                <div>{{vendedor.name}}</div>
+            </div>
+            <div class = "item">
+                <div>Idade</div>
+                <div>{{vendedor.age}}</div>
+            </div>
+            <div class = "item">
+                <div>Setor</div>
+                {% for service in vendedor.services %}
+                <span>{{ service }}</span>
+                {% endfor %}
+            </div>
+            <div class = "item">
+                <div> Adicionado em </div>
+                <div> {{vendedor.created_at}}</div>
+            </div>
+
+            <a href="/vendedores/{{vendedor.id}}/edit" class = "button">Editar</a>
+        </section>
+    </div>
+{% endblock content %}

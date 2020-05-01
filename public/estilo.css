@@ -1,0 +1,227 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none; 
+}
+
+
+#titulo {
+    color: whitesmoke;
+    text-align: left;
+    position: absolute;
+    margin-top: -10px;
+    left: 15px; 
+}
+#titulo a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+body{
+    background-color: whitesmoke;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+header{
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 70px;
+}
+
+.links {
+    font-size: 22px;
+}
+
+.links a + a {
+    margin-left: 35px;
+}
+
+.links a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* ==== CARDS ==== */
+.card {
+    background-color: black;
+    width: 700px;
+    min-height: 350px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.5);
+
+
+    animation: up 400ms ease-out;
+}
+
+    @keyframes up {
+        from{
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+/*    Details   */
+.details {
+    padding: 32px;
+}
+
+.details .item{
+    color: whitesmoke;
+    border-bottom: 1px solid  rgba(255, 255, 255, 0.5);
+    padding: 16px 0;
+}
+
+.details .item:last-child{
+    border: none;
+}
+
+.details  .item div:nth-child(1) {
+    color: darkgray;
+    font-weight: bolder;
+    font-size: 17px;
+    line-height: 35px;
+    letter-spacing: 0.7px;
+}
+
+.details .item span{
+    padding: 8px 14px;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+}
+
+
+/*    FORM    */
+input {
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: black;
+    line-height: 30px;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+    color: whitesmoke;
+    background-color: black;
+}
+
+button[type="submit"], a.button{
+    font-size: 16px;
+    padding: 8px 32px;
+    background-color: whitesmoke;
+    color: black;
+    margin-top: 15px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+}
+
+h3 {
+    color: whitesmoke;
+}
+
+#form-delete button[type = "submit"] {
+    margin-top: 8px;
+    background-color: rgb(151, 20, 20);
+    color: white;
+}
+
+/* INDEX VENDEDORES */
+.table-container {
+    color: whitesmoke;
+    display: block;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.table-container table {
+    border-spacing: 0;
+
+}
+
+.table-container thead tr th{
+    text-align: left;
+}
+
+.table-container  td, th {
+    padding: 16px;
+    border-bottom: 1px solid white;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr td:first-child span{
+    display: grid;
+    grid-template-columns: 64px  1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span{
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border : 2px solid white;
+}
+
+tbody tr td:last-child a, 
+.table-container > a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+} 
+
+
+.table-container > a {
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 180px;
+    height: 25px;
+    padding-top: 8px;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.nome_lista {
+    margin-left: 100px;
+    margin-top: -35px;
+    margin-bottom: 20px;
+}
+
+th{
+    text-transform: uppercase;
+}
+
+
+.table-container thead tr th:last-child,
+td:last-child {
+    text-align: center;
+}

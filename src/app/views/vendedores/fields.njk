@@ -1,0 +1,40 @@
+    <div class = 'item'> 
+        <div>Portfolio (LinkedIn, GitHub)</div>
+        <div><input 
+            type= "url" 
+            name = "avatar_url" 
+            placeholder = "http://"
+            value = {{vendedor.avatar_url}}
+            >
+        </div>
+    </div>
+    <div class = "item">
+        <div> Nome </div>
+        <div>
+            <input 
+            type="text" 
+            name = "name" 
+            placeholder= "Nome"
+            value = {{vendedor.name}}
+            >
+        </div>
+    </div>
+    <div class = "item">
+        <div>Data de Nascimento</div>
+        <div><input 
+            type="date" 
+            name="birth" 
+            value = {{vendedor.birth}}
+            >
+        </div>
+    </div>
+    <div class = "item">
+        <div>Setor</div>
+        <input 
+            type="text" 
+            name="services" 
+            placeholder = "Separe as áreas de atuação por vírgula"
+            value = {{vendedor.services}}
+        >
+    </div>
+<button type="submit"> Salvar </button>

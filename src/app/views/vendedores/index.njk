@@ -1,0 +1,27 @@
+{% extends "layout.njk" %}
+
+{% block content%}
+    <div class = 'card table-container'>
+        <a href = "/vendedores/create">Adicionar Vendedor</a>
+        <table  width = "100%" >
+            <thead>
+                <tr>
+                    <th>Vendedor</th>
+                    <th>Setor</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vendedor in vendedores%}
+                <tr>
+                    <td>
+                    <span style = "background-image: url({{vendedor.avatar_url}})"></span>
+                    <div class = "nome_lista">{{vendedor.name}}</div></td>
+                    <td>{{vendedor.services}}</td>
+                    <td><a href="/vendedores/{{vendedor.id}}">ver</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

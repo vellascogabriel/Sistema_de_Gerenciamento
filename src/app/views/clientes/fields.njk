@@ -1,0 +1,41 @@
+    <div class = 'item'> 
+        <div>URL</div>
+        <div><input 
+            type= "url" 
+            name = "avatar_url" 
+            placeholder = "http://"
+            value = {{cliente.avatar_url}}
+            >
+        </div>
+    </div>
+    <div class = "item">
+        <div> Cliente </div>
+        <div>
+            <input 
+            type="text" 
+            name = "name" 
+            placeholder= "Nome do cliente"
+            value = {{cliente.name}}
+            >
+        </div>
+    </div>
+    <div class = "item">
+        <div> Email </div>
+        <div>
+            <input 
+            type="email" 
+            name = "email" 
+            value = {{cliente.email}}
+            >
+        </div>
+    </div>
+    <div class = "item">
+        <div>Data de Nascimento</div>
+        <div><input 
+            type="date" 
+            name="birth" 
+            value = {{cliente.birth}}
+            >
+        </div>
+    </div>
+<button type="submit"> Salvar </button>

@@ -1,0 +1,27 @@
+{% extends "layout.njk" %}
+
+{% block content%}
+    <div class = 'card table-container'>
+        <a href = "/clientes/create">Adicionar Cliente</a>
+        <table  width = "100%" >
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Email</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cliente in clientes%}
+                <tr>
+                    <td>
+                    <span style = "background-image: url({{cliente.avatar_url}})"></span>
+                    <div class = "nome_lista">{{cliente.name}}</div></td>
+                    <td>{{cliente.email}}</td>
+                    <td><a href="/clientes/{{cliente.id}}">ver</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}
